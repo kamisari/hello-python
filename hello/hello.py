@@ -4,6 +4,8 @@
 
 def main():
     print('hello world')
+    print('hello ', end=',,,')
+    print('world')
 
 if __name__ == '__main__':
     main()
