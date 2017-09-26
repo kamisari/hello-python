@@ -1,20 +1,19 @@
 # vim: fileencoding=utf-8
 
+# TODO: impl
 
 import numpy as np
 
-def bubblesort(arrOrigin):
+def insertion(arrOrigin):
     arr = arrOrigin.copy()
-    for i in range(len(arr)-1):
-        for j in range(len(arr)-1, i, -1):
-            if arr[j] < arr[j-1]:
-                arr[j], arr[j-1] = arr[j-1], arr[j]
+    for i in range(len(arr)):
+        pass
     return arr
 
 def main():
     arr = np.random.randint(0, 1000, 10)
     print("befor:", arr, "arr")
-    afterarr = bubblesort(arr)
+    afterarr = insertion(arr)
     print("after:", afterarr, "afterarr")
     print("check:", arr, "arr")
 
