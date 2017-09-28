@@ -1,13 +1,18 @@
 # vim: fileencoding=utf-8
 
-# TODO: impl
-
 import numpy as np
 
 def insertion(arrOrigin):
     arr = arrOrigin.copy()
-    for i in range(len(arr)):
-        pass
+    for i in range(1, len(arr)):
+        v = arr[i]
+        j = i-1
+        while j != -1 and v < arr[j]:
+            print(i, "j:", j, v, "<", arr[j])
+            arr[j+1] = arr[j]
+            j -= 1
+        # fill in the blank
+        arr[j+1] = v
     return arr
 
 def main():
