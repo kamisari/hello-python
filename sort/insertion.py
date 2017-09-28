@@ -7,6 +7,7 @@ def insertion(arrOrigin):
     for i in range(1, len(arr)):
         v = arr[i]
         j = i-1
+        # arr[i] = blank
         while j != -1 and v < arr[j]:
             print(i, "j:", j, v, "<", arr[j])
             arr[j+1] = arr[j]

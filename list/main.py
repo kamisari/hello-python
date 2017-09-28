@@ -13,8 +13,21 @@ def typeList():
     print('len: cp squares', len(cp), len(squares))
 
 
+def slice():
+    l = [1,2,3,4]
+    print(l)
+    print("l[0:]", l[0:])
+    print("l[1:]", l[1:])
+    print("l[:0]", l[:0])
+
+    l2 = [1]
+    print("l2[0:]", l2[0:])
+    print("l2[1:]", l2[1:])
+
 def main():
     typeList()
+    print("slice")
+    slice()
 
 if __name__ == '__main__':
     main()
