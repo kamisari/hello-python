@@ -25,7 +25,7 @@ def mergeList(a, b, l):
     if len(b) == 0:
         l.append(a[0])
         return mergeList(a[1:], b, l)
-    if a[0] < b[0]:
+    if a[0] < b[0]: # reverse: '>'
         l.append(a[0])
         return mergeList(a[1:], b, l)
     else:
