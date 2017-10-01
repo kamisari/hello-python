@@ -29,23 +29,26 @@ def methods():
     l = []
     show = lambda s='': print(':', s, l)
     l.append(0)
-    show('after append')
+    show('after append:')
     l.clear()
-    show('after clear')
+    # same: del l[:]
+    show('after clear:')
     l.append(0)
     l.append(1)
     l.reverse()
-    show('after reverse')
+    show('after reverse:')
     l.pop()
-    show('after pop')
+    show('after pop:')
     l.append(0)
     show()
     l.pop(1)
-    show('after pop(1)')
+    show('after pop(1):')
     l.extend(l.copy())
-    show('after extend(copy())')
+    show('after extend(copy()):')
     l.insert(1, 2)
-    show('after insert(1, 2)')
+    show('after insert(1, 2):')
+    del l[0]
+    show('after del l[0]:')
 
 def main():
     type_list()
