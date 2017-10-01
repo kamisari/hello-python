@@ -1,6 +1,5 @@
 # vim: fileencoding=utf-8
 
-
 import numpy as np
 
 def bubblesort(arrOrigin):

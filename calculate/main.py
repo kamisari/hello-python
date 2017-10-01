@@ -21,6 +21,14 @@ def surplus(x, y):
 def squared(x, y):
     print('squared():', x**y)
 
+
+def checkDiv():
+    print("checkDiv():")
+    for i in range(11):
+        print(i)
+        for j in range(1,11):
+            print("j:", j, "result:",  i//j)
+
 def main():
     add(4,2)
     subtract(4,2)
@@ -32,3 +40,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+    checkDiv()
