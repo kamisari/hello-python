@@ -2,6 +2,7 @@
 class
 """
 
+# class name is CamelCase
 
 class Nyan(object):
     def __init__(self, name):

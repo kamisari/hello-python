@@ -15,11 +15,15 @@ def heap(arr):
 
 def makeHeap(arr):
 
-    #i = 0
-    #index = i
-    #x = arr[index]
-    #lam = lambda: x < arr[(index-1)//2]
-    #print(lam())
+    boolForAllow = True
+    i = 0
+    index = i
+    x = arr[index]
+    if boolForAllow:
+       lam = lambda: x < arr[(index-1)//2]
+    else:
+       lam = lambda: x > arr[(index-1)//2]
+    print(lam())
 
     for i in range(len(arr)):
         index = i

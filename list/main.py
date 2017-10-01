@@ -1,7 +1,7 @@
 # vim: fileencoding=utf-8
 
-def typeList():
-    print('typeList():')
+def type_list():
+    print('type_list():')
     squares = [1, 4, 9, 16, 25]
     for x in squares:
         print(x)
@@ -25,7 +25,7 @@ def slice():
     print("l2[1:]", l2[1:])
 
 def main():
-    typeList()
+    type_list()
     print("slice")
     slice()
 

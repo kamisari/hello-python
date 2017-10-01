@@ -7,8 +7,8 @@ def iterator():
     for w in words:
         print('w = ', w, len(w))
 
-def iteratorLimit10():
-    print('\niteratorLimit10()')
+def iterator_limit10():
+    print('\niterator_limit10()')
     words = ['c', 'python', 'go', 'ruby']
     print('before: words = ', words)
     count = 0
@@ -21,8 +21,8 @@ def iteratorLimit10():
             words.insert(0, w)
     print('after: words = ', words, '\n')
 
-def iteratorCopy():
-    print('\niteratorCopy()')
+def iterator_copy():
+    print('\niterator_copy()')
     words = ['c', 'python', 'go', 'ruby']
     print('before: words = ', words)
     for w in words[:]:
@@ -31,16 +31,16 @@ def iteratorCopy():
             words.insert(0, w)
     print('after: words = ', words, '\n')
 
-def iteratorCopySlice():
-    print('\niteratorCopy()')
+def iterator_copy_slice():
+    print('\niterator_copy()')
     words = ['c', 'python', 'go', 'ruby']
     print('words = ', words)
     print('slice[1:3]')
     for w in words[1:3]:
         print('w = ', w, len(w))
 
-def forRange():
-    print('\nforRange()')
+def for_range():
+    print('\nfor_range()')
     print('range 10')
     for i in range(10):
         print('  ', i)
@@ -51,14 +51,14 @@ def forRange():
     for i in range(-10, -100, -30):
         print('  ', i)
 
-def lenRange():
-    print('\nlenRange()')
+def len_range():
+    print('\nlen_range()')
     words = ['c', 'python', 'go', 'ruby']
     for i in range(len(words)):
         print(i, words[i])
 
-def forElse():
-    print('\nforElse()')
+def for_else():
+    print('\nfor_else()')
     for n in range(2, 10):
         for x in range(2, n):
             if n % x == 0:
@@ -67,8 +67,8 @@ def forElse():
         else: # loop fell through
             print(n, 'is a prime number')
 
-def loopContinue():
-    print('\nloopContinue()')
+def loop_continue():
+    print('\nloop_continue()')
     for i in range(10):
         continue
         print(i) # unreachable
@@ -77,13 +77,13 @@ def loopContinue():
 
 def main():
     iterator()
-    iteratorLimit10()
-    iteratorCopy()
-    iteratorCopySlice()
-    forRange()
-    lenRange()
-    forElse()
-    loopContinue()
+    iterator_limit10()
+    iterator_copy()
+    iterator_copy_slice()
+    for_range()
+    len_range()
+    for_else()
+    loop_continue()
 
 
 if __name__ == '__main__':

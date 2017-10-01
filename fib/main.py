@@ -8,15 +8,15 @@ def fib(x):
         a, b = b, a+b
     print()
 
-def fibRange(x):
-    print('fibRange():')
+def fib_range(x):
+    print('fib_range():')
     a, b = 0, 1
     for i in range(x):
         print(b, end=' ')
         a, b = b, a+b
     print()
 
-def checkTheNone():
+def check_the_none():
     print(end='')
 
 def fib2(x=20):
@@ -30,11 +30,11 @@ def fib2(x=20):
 
 def main():
     fib(1000)
-    fibRange(100)
+    fib_range(100)
 
     print('\nCheck the None')
-    print(checkTheNone())
-    print(checkTheNone()==None)
+    print(check_the_none())
+    print(check_the_none()==None)
     print()
 
     print(fib2(10))

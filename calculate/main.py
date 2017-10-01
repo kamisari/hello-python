@@ -12,8 +12,8 @@ def multiply(x, y):
 def divide(x, y):
     print('divide():', x/y)
 
-def discardPart(x, y):
-    print('discardPart():', x//y)
+def discard_part(x, y):
+    print('discard_part():', x//y)
 
 def surplus(x, y):
     print('surplus():', x%y)
@@ -22,8 +22,8 @@ def squared(x, y):
     print('squared():', x**y)
 
 
-def checkDiv():
-    print("checkDiv():")
+def check_div():
+    print("check_div():")
     for i in range(11):
         print(i)
         for j in range(1,11):
@@ -34,10 +34,10 @@ def main():
     subtract(4,2)
     multiply(4,2)
     divide(5,2)
-    discardPart(5,2)
+    discard_part(5,2)
     surplus(5,2)
     squared(4,2)
 
 if __name__ == '__main__':
     main()
-    checkDiv()
+    check_div()
