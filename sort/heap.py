@@ -13,7 +13,7 @@ import numpy as np
 def heap(arr):
     return arr
 
-def makeHeap(arr):
+def make_heap(arr):
 
     boolForAllow = True
     i = 0
@@ -44,7 +44,7 @@ def main():
     print("after:", afterarr, "afterarr")
     print("check:", arr, "arr")
 
-    print("makeHeap:", makeHeap(arr))
+    print("make_heap:", make_heap(arr))
 
 if __name__ == '__main__':
     main()

@@ -13,24 +13,24 @@ def merge(arr):
     div = len(arr)//2
     la = merge(arr[:div])
     lb = merge(arr[div:])
-    return mergeList(la, lb, [])
+    return merge_list(la, lb, [])
 
 
-def mergeList(a, b, l):
+def merge_list(a, b, l):
     if len(a) == 0 and len(b) == 0:
         return l
     if len(a) == 0:
         l.append(b[0])
-        return mergeList(a, b[1:], l)
+        return merge_list(a, b[1:], l)
     if len(b) == 0:
         l.append(a[0])
-        return mergeList(a[1:], b, l)
+        return merge_list(a[1:], b, l)
     if a[0] < b[0]: # reverse: '>'
         l.append(a[0])
-        return mergeList(a[1:], b, l)
+        return merge_list(a[1:], b, l)
     else:
         l.append(b[0])
-        return mergeList(a, b[1:], l)
+        return merge_list(a, b[1:], l)
 
 def main():
     arr = np.random.randint(0, 1000, 10)
@@ -39,7 +39,7 @@ def main():
     print("after:", afterarr, "afterarr")
     print("check:", arr, "arr")
 
-    print("mergeList:", mergeList([1,2,3,4],[1,2,3],[]))
+    print("merge_list:", merge_list([1,2,3,4],[1,2,3],[]))
 
 if __name__ == '__main__':
     main()

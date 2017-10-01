@@ -2,7 +2,7 @@
 
 import numpy as np
 
-def SelectionSort(arrOrigin):
+def selection_sort(arrOrigin):
     arr = arrOrigin.copy()
     for i in range(len(arr)):
         minIndex = i
@@ -15,7 +15,7 @@ def SelectionSort(arrOrigin):
 def main():
     arr = np.random.randint(0, 1000, 10)
     print("befor:", arr, "arr")
-    afterarr = SelectionSort(arr)
+    afterarr = selection_sort(arr)
     print("after:", afterarr, "afterarr")
     print("check:", arr, "arr")
 
