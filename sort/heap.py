@@ -1,8 +1,6 @@
 # vim: fileencoding=utf-8
 
 
-# TODO: impl
-
 import numpy as np
 
 # zero baseed heap in array
@@ -11,30 +9,24 @@ import numpy as np
 # child right: index*2+2
 
 def heap(arr):
+    for i in range(len(arr)-1, -1, -1):
+        make_heap(arr, i+1)
+        arr[0], arr[i], = arr[i], arr[0]
     return arr
 
-def make_heap(arr):
-
-    boolForAllow = True
-    i = 0
-    index = i
-    x = arr[index]
-    if boolForAllow:
-       lam = lambda: x < arr[(index-1)//2]
-    else:
-       lam = lambda: x > arr[(index-1)//2]
-    print(lam())
-
-    for i in range(len(arr)):
+def make_heap(arr, end=None):
+    if end == None:
+        end = len(arr)
+    for i in range(end):
         index = i
         x = arr[index]
-        print(i, ": before", arr)
-        while index > 0 and x < arr[(index-1)//2]: # reverse  x > arr[(index-1)//2]
-            print("swapp: index=", index, "x=", x, "parent=", arr[(index-1)//2])
+        #if index > 0:
+        #    print("node=", index, "parent=", (index-1)//2)
+        while index > 0 and x > arr[(index-1)//2]: # reverse  x < arr[(index-1)//2]
+            #print("arr  :", arr, "swapp:", x, arr[(index-1)//2])
             arr[index] = arr[(index-1)//2]
             index = (index-1)//2
         arr[index] = x
-        print(i, ": after ", arr)
     return arr
 
 def main():
@@ -43,8 +35,6 @@ def main():
     afterarr = heap(arr.copy())
     print("after:", afterarr, "afterarr")
     print("check:", arr, "arr")
-
-    print("make_heap:", make_heap(arr))
 
 if __name__ == '__main__':
     main()

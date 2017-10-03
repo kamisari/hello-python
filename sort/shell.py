@@ -2,20 +2,20 @@
 
 import numpy as np
 
-def insertion(arr, n=1):
-    for i in range(0, len(arr), n):
+def insertion(arr, interval=1):
+    for i in range(0, len(arr), interval):
         v = arr[i]
-        j = i-n
+        j = i-interval
         while j > -1 and v < arr[j]:
-            arr[j+n] = arr[j]
-            j -= n
+            arr[j+interval] = arr[j]
+            j -= interval
         # fill in the blank
-        arr[j+n] = v
+        arr[j+interval] = v
     return arr
 
-def shell(arr, n=1):
-    for i in range(n, 0, -1):
-        print("\t", "shell: n:", i, arr)
+def shell(arr, interval=1):
+    for i in range(interval, 0, -1):
+        print("\t", "shell: interval:", i, arr)
         arr = insertion(arr, i)
     return arr
 
@@ -25,7 +25,7 @@ def main():
     afterarr = insertion(arr.copy())
     print("after:", afterarr, "afterarr")
     print("check:", arr, "arr")
-    print("shell:", shell(arr.copy(), 4), "n:", 4)
+    print("shell:", shell(arr.copy(), 4))
 
 if __name__ == '__main__':
     main()
