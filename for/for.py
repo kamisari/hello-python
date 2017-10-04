@@ -74,6 +74,16 @@ def loop_continue():
         print(i) # unreachable
     print('exit unreachable loop')
 
+def for_range():
+    print('\nfor_range()')
+    arr = [0,1,2,3,4,5]
+    for i in range(len(arr)):
+        print(i, arr[i])
+    print('override')
+    for i in range(len(arr)):
+        print(i, arr[i])
+        i += 10
+        print("after += :", i)
 
 def main():
     iterator()
@@ -84,6 +94,7 @@ def main():
     len_range()
     for_else()
     loop_continue()
+    for_range()
 
 
 if __name__ == '__main__':
